@@ -8,12 +8,12 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         ByteBuf b = (ByteBuf) msg;
-//        char ch;
-//        while (b.isReadable()) {
-//            ch = (char) b.readByte();
-//            System.out.println(ch);
-//            System.out.flush();
-//        }
+        char ch;
+        while (b.isReadable()) {
+            ch = (char) b.readByte();
+            System.out.println(ch);
+            System.out.flush();
+        }
         ctx.write(msg);
         ctx.flush();
     }

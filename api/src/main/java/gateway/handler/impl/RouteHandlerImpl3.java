@@ -22,7 +22,7 @@ import java.util.Map;
  * domain_A -> domain_B
  * ...
  */
-public class RouteHandlerImpl extends ChannelInboundHandlerAdapter implements RouteHandler {
+public class RouteHandlerImpl3 extends SimpleChannelInboundHandler<FullHttpRequest> implements RouteHandler {
     private static final String key = "1";
 
     private String fromUri1 = "/api";
@@ -32,38 +32,35 @@ public class RouteHandlerImpl extends ChannelInboundHandlerAdapter implements Ro
     private String toUri2 = "https://www.baidu.com/s?wd=";
 
     {
-        System.out.println("RouteHandlerImpl 实例化。。。");
+        System.out.println("RouteHandlerImplDirectSendFullHttpRequest 实例化。。。");
     }
 
     private HttpMethod httpMethod;
     private HttpContent httpContent;
     private String url;
 
-    public void channelRead(ChannelHandlerContext channelHandlerContext, Object httpObject) throws Exception {
+    @Override
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest request) throws Exception {
         boolean returnNotFound = false;
         String result = null;
-        if (httpObject instanceof FullHttpRequest) {
-            FullHttpRequest request = ((FullHttpRequest) httpObject);
 
-            httpMethod = request.method();
-            String uri = request.uri();
+        httpMethod = request.method();
+        String uri = request.uri();
 
-            if (uri.startsWith(fromUri1)) {
-                url = uri.replace(fromUri1, toUri1);
-            } else if (uri.startsWith(fromUri2)) {
-                url = uri.replace(fromUri2, toUri2);
-            } else {
-                result = "404 \n resource not found";
-                returnNotFound = true;
-            }
-
-            if (!returnNotFound) {
-                result = sendRequest(httpMethod, url, request);
-            }
-
-            writeAndFlush(channelHandlerContext, Unpooled.copiedBuffer(result, CharsetUtil.UTF_8));
+        if (uri.startsWith(fromUri1)) {
+            url = uri.replace(fromUri1, toUri1);
+        } else if (uri.startsWith(fromUri2)) {
+            url = uri.replace(fromUri2, toUri2);
+        } else {
+            result = "404 \n resource not found";
+            returnNotFound = true;
         }
 
+        if (!returnNotFound) {
+            result = sendRequest(httpMethod, url, request);
+        }
+
+        writeAndFlush(channelHandlerContext, Unpooled.copiedBuffer(result, CharsetUtil.UTF_8));
     }
 
     private String sendRequest(HttpMethod httpMethod, String url, FullHttpRequest request) {
