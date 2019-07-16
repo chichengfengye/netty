@@ -1,4 +1,4 @@
-//package gateway.handler.impl;
+//package gateway.handler.impl.simpleinbound;
 //
 ////import gateway.config.RoutesConfig;
 //
@@ -6,20 +6,14 @@
 //import gateway.handler.RouteHandler;
 //import io.netty.buffer.ByteBuf;
 //import io.netty.buffer.Unpooled;
-//import io.netty.channel.ChannelFutureListener;
 //import io.netty.channel.ChannelHandlerContext;
 //import io.netty.channel.SimpleChannelInboundHandler;
 //import io.netty.handler.codec.http.*;
 //import io.netty.util.CharsetUtil;
-//import io.netty.util.Signal;
-//import io.netty.util.concurrent.Future;
-//import io.netty.util.concurrent.FutureListener;
 //import okhttp3.*;
 //
 //import java.io.IOException;
 //import java.util.Map;
-//import java.util.concurrent.Callable;
-//import java.util.concurrent.TimeUnit;
 //
 ///**
 // * 路由
@@ -39,7 +33,7 @@
 //    private String toUri2 = "https://www.baidu.com/s?wd=";
 //
 //    {
-//        System.out.println("RouteHandlerImplDirectSendFullHttpRequest 实例化。。。");
+//        System.out.println("RouteInBoundHandlerImpl 实例化。。。");
 //    }
 //
 //    private HttpMethod httpMethod;

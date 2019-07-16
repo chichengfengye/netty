@@ -3,7 +3,6 @@ package gateway;
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.nio.NioEventLoopGroup;
-import io.netty.channel.socket.ServerSocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
 /**
@@ -40,11 +39,11 @@ public class ProxyServer {
             ServerBootstrap serverBootstrap = new ServerBootstrap();
             serverBootstrap.group(bossGroup, workerGroup)
                     .channel(NioServerSocketChannel.class)
+//                    .handler(new MyChannelDuplexHandler())
                     .childHandler(new ProxyChannelInitializer());
 //            System.out.println("start server on port: " + port);
             ChannelFuture future = serverBootstrap.bind(port).sync();
             System.out.println("server started on port: " + port);
-
 
             future.channel().closeFuture().sync();
             System.out.println("closeFuture on port: " + port);
@@ -55,4 +54,6 @@ public class ProxyServer {
             workerGroup.shutdownGracefully();
         }
     }
+
+
 }

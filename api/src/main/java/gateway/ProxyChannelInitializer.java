@@ -1,7 +1,8 @@
 package gateway;
 
 import gateway.handler.RouteHandler;
-import gateway.handler.impl.RouteHandlerImplDirectSendFullHttpRequest;
+import gateway.handler.impl.fullreq.AuthInBoundHandlerImpl;
+import gateway.handler.impl.fullreq.RouteInBoundHandlerImpl;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -25,7 +26,8 @@ public class ProxyChannelInitializer extends ChannelInitializer<SocketChannel> {
         channelPipeline.addLast("HttpObjectAggregator", new HttpObjectAggregator(1024 * 1024));
 
         //扩展行为
-        channelPipeline.addLast("RouteHandlerImplDirectSendFullHttpRequest", new RouteHandlerImplDirectSendFullHttpRequest());//路由映射
+        channelPipeline.addLast("RouteInBoundHandlerImpl", new RouteInBoundHandlerImpl());//路由映射
+//        channelPipeline.addLast("RouteHandlerImpl4", new AuthInBoundHandlerImpl());//鉴权
 
         System.out.println("add channel handler finished...");
     }

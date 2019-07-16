@@ -1,6 +1,7 @@
 package gateway.handler;
 
 import gateway.ProxyServer;
+import gateway.common.ProxiedService;
 import gateway.common.User;
 
 /**
@@ -16,15 +17,15 @@ public interface AuthHandler {
      *
      * @return
      */
-    User authUser(String userId);
+//    User authUser(String userId);
 
     /**
      * 判断用户是否被允许访问该接口
      *
-     * @param proxyServer : 被代理的服务
-     * @param user ： 用户
+     * @param proxyService : 被代理的服务
+     * @param key ： 用户傳來的key
      * @return
      */
-    boolean isAccessible(ProxyServer proxyServer, User user);
+    boolean isAccessible(ProxiedService proxyService, String key);
 
 }
