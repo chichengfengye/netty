@@ -1,27 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f967fbdd-9c48-4ba9-a983-f16171372341" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendFullHttpRequest.java" afterDir="false" />
+    <list default="true" id="f967fbdd-9c48-4ba9-a983-f16171372341" name="Default" comment="for test">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/api/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/gateway/ProxyChannelInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/gateway/ProxyChannelInitializer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImpl3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImpl2.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendSimpleInBound.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/ProxyChannelInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/ProxyChannelInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/ProxyServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/ProxyServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/common/ProxiedService.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/common/ProxiedService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/common/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/common/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/handler/AuthHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/handler/AuthHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/handler/RouteHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/handler/RouteHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/handler/impl/RouteHandlerImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/handler/impl/RouteHandlerImpl2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/gateway/util/HttpUtil.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/gateway/util/HttpUtil.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/test/TestChannelInitializer.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/test/TestChannelInitializer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/test/TestHttpServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/test/TestHttpServerHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/target/classes/test/TestServer.class" beforeDir="false" afterPath="$PROJECT_DIR$/api/target/classes/test/TestServer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/study1/echoserver/EchoServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/study1/echoserver/EchoServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/study1/echoserver/EchoServerHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/study1/echoserver/EchoServerHandler.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -43,8 +25,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/ProxyChannelInitializer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="453">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,13 +37,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendFullHttpRequest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+            <state relative-caret-position="371">
+              <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
               <folding>
-                <element signature="method#writeAndFlush#0;class#RouteHandlerImplControlSend#0" />
-                <element signature="method#httpResponse#0;class#RouteHandlerImplControlSend#0" />
+                <element signature="e#4807#4808#0" expanded="true" />
                 <element signature="e#4834#4835#0" expanded="true" />
+                <element signature="e#4889#4890#0" expanded="true" />
                 <element signature="e#4916#4917#0" expanded="true" />
+                <element signature="e#4982#4983#0" expanded="true" />
                 <element signature="e#5009#5010#0" expanded="true" />
               </folding>
             </state>
@@ -69,28 +52,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendSimpleInBound.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImpl3.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="22" column="6" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/test/TestHttpServerHandler.java">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/ProxyServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="337">
+              <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -133,6 +107,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="auth-branch" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -150,7 +129,6 @@
         <option value="$PROJECT_DIR$/src/main/java/study1/timeserver/TimeServerHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/study1/timeserver/TimeClient.java" />
         <option value="$PROJECT_DIR$/src/main/java/study1/timeserver/TimeClientHandler.java" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/api/stste.txt" />
         <option value="$PROJECT_DIR$/api/src/main/java/test/Hhh.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/test/TestHandler.java" />
@@ -185,9 +163,10 @@
         <option value="$PROJECT_DIR$/api/pom.xml" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplControlSend.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSend.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendSimpleInBound.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendFullHttpRequest.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/ProxyChannelInitializer.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendSimpleInBound.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -242,66 +221,6 @@
               <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
               <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -474,16 +393,24 @@
       <workItem from="1562891494387" duration="17866000" />
       <workItem from="1563153630000" duration="13771000" />
     </task>
+    <task id="LOCAL-00001" summary="for test">
+      <created>1563331972872</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1563331972872</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="80478000" />
+    <option name="totallyTimeSpent" value="81519000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49439463" visible="true" weight="0.17420538" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49439463" visible="true" weight="0.22066015" />
       <window_info id="Structure" order="1" sideWeight="0.5056054" side_tool="true" weight="0.29400977" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -492,7 +419,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.5100897" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.20515695" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.21860987" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -558,6 +485,10 @@
       </map>
     </option>
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="for test" />
+    <option name="LAST_COMMIT_MESSAGE" value="for test" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -585,19 +516,10 @@
           <properties />
           <option name="timeStamp" value="21" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendFullHttpRequest.java</url>
-          <line>77</line>
-          <properties />
-          <option name="timeStamp" value="36" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/api/src/main/resources/route1.properties">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/helper/RouteHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -863,16 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/ProxyServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="427">
-          <caret line="45" column="66" lean-forward="true" selection-start-line="45" selection-start-column="66" selection-end-line="45" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.10.Final/netty-all-4.1.10.Final.jar!/io/netty/handler/codec/http/FullHttpRequest.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
@@ -953,15 +865,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendSimpleInBound.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/ProxyServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="45" column="43" selection-start-line="45" selection-start-column="43" selection-end-line="45" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendFullHttpRequest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
+        <state relative-caret-position="371">
+          <caret line="41" column="5" lean-forward="true" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
           <folding>
-            <element signature="method#writeAndFlush#0;class#RouteHandlerImplControlSend#0" />
-            <element signature="method#httpResponse#0;class#RouteHandlerImplControlSend#0" />
+            <element signature="e#4807#4808#0" expanded="true" />
             <element signature="e#4834#4835#0" expanded="true" />
+            <element signature="e#4889#4890#0" expanded="true" />
             <element signature="e#4916#4917#0" expanded="true" />
+            <element signature="e#4982#4983#0" expanded="true" />
             <element signature="e#5009#5010#0" expanded="true" />
           </folding>
         </state>
@@ -969,18 +899,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/ProxyChannelInitializer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="453">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/RouteHandlerImplDirectSendSimpleInBound.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="14" column="41" lean-forward="true" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+        <state relative-caret-position="90">
+          <caret line="3" column="11" lean-forward="true" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
         </state>
       </provider>
     </entry>

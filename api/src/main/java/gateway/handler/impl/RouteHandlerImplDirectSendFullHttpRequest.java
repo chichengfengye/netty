@@ -35,8 +35,10 @@ public class RouteHandlerImplDirectSendFullHttpRequest extends SimpleChannelInbo
     private String fromUri2 = "/bd/swd";
     private String toUri2 = "http://www.baidu.com/s";
 
+    private String testUrl = "http://api.test.com:80";
+
     {
-        System.out.println("RouteHandlerImplDirectSendFullHttpRequest 实例化。。。");
+//        System.out.println("RouteHandlerImplDirectSendFullHttpRequest 实例化。。。");
     }
 
     private HttpMethod httpMethod;
@@ -49,7 +51,9 @@ public class RouteHandlerImplDirectSendFullHttpRequest extends SimpleChannelInbo
         httpMethod = request.method();
         String uri = request.uri();
 
-        if (uri.startsWith(fromUri1)) {
+        url = testUrl + uri;
+
+     /*   if (uri.startsWith(fromUri1)) {
             url = uri.replace(fromUri1, toUri1);
         } else if (uri.startsWith(fromUri2)) {
             url = uri.replace(fromUri2, toUri2);
@@ -57,7 +61,7 @@ public class RouteHandlerImplDirectSendFullHttpRequest extends SimpleChannelInbo
             result = "404 \n resource not found";
             returnNotFound = true;
         }
-
+*/
         if (!returnNotFound) {
             result = sendRequest(httpMethod, url, request);
         }
@@ -89,21 +93,6 @@ public class RouteHandlerImplDirectSendFullHttpRequest extends SimpleChannelInbo
 
             String contentType = headers.get("content-type");
             mediaType = MediaType.get(contentType + "; charset=utf-8");
-
-        /*    if (contentType.equals("application/json")) {
-                QueryStringDecoder queryDecoder = new QueryStringDecoder(reqBody, false);
-                Map<String, List<String>> uriAttributes = queryDecoder.parameters();
-                for (Map.Entry<String, List<String>> attr : uriAttributes.entrySet()) {
-                    for (String attrVal : attr.getValue()) {
-                        System.out.println(attr.getKey() + "=" + attrVal);
-                    }
-                }
-            }
-            if (contentType.equals("application/x-www-form-urlencoded")) {
-                JSONObject jsonObject = JSON.parseObject(reqBody);
-                System.out.println(jsonObject);
-            }*/
-
 
             body = RequestBody.create(mediaType, reqBody);
             okRequest = new Request.Builder()

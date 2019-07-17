@@ -27,7 +27,7 @@ public class ProxyChannelInitializer extends ChannelInitializer<SocketChannel> {
         //扩展行为
         channelPipeline.addLast("RouteHandlerImplDirectSendFullHttpRequest", new RouteHandlerImplDirectSendFullHttpRequest());//路由映射
 
-        System.out.println("add channel handler finished...");
+//        System.out.println("add channel handler finished...");
     }
 
 }
