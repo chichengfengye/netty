@@ -9,7 +9,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.util.CharsetUtil;
 
-public abstract class AbstractInBoundHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
+public abstract class AbstractInBoundSimpleHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
     protected abstract ReturnResult businessRead(ChannelHandlerContext ctx, FullHttpRequest msg);
 
     protected abstract void businessRead2(ChannelHandlerContext ctx, FullHttpRequest msg) throws NettyHandlerException;
@@ -27,11 +27,12 @@ public abstract class AbstractInBoundHandler extends SimpleChannelInboundHandler
         try {
             businessRead2(ctx, msg);
             if (!isLast()) {
-                ctx.fireChannelRead(msg);
+
+                //                ctx.fireChannelRead(msg);
             }
         }catch (NettyHandlerException e){
             System.out.println(e.getCode() + ":" + e.getMsg());
-            ctx.writeAndFlush(ResponseBackHelper.httpResponse(Unpooled.copiedBuffer("404 \n resource not found", CharsetUtil.UTF_8)));
+            ctx.writeAndFlush(ResponseBackHelper.httpJsonResponse(Unpooled.copiedBuffer("404 \n resource not found", CharsetUtil.UTF_8)));
             ctx.close();
         }
       /*  ReturnResult returnResult = businessRead(ctx, msg);
@@ -39,7 +40,7 @@ public abstract class AbstractInBoundHandler extends SimpleChannelInboundHandler
             ctx.fireChannelRead(msg);
         } else {
             System.out.println(returnResult.getCode() + ":" + returnResult.getMsg());
-            ctx.writeAndFlush(ResponseBackHelper.httpResponse(Unpooled.copiedBuffer("404 \n resource not found", CharsetUtil.UTF_8)));
+            ctx.writeAndFlush(ResponseBackHelper.httpJsonResponse(Unpooled.copiedBuffer("404 \n resource not found", CharsetUtil.UTF_8)));
             ctx.close();
         }*/
     }

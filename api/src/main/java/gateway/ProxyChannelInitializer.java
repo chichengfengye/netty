@@ -1,8 +1,10 @@
 package gateway;
 
+import gateway.handler.IOHandler;
 import gateway.handler.RouteHandler;
-import gateway.handler.impl.fullreq.AuthInBoundHandlerImpl;
-import gateway.handler.impl.fullreq.RouteInBoundHandlerImpl;
+import gateway.handler.impl.adapter.AuthInBoundAdapterHandlerImpl;
+import gateway.handler.impl.adapter.RouteInBoundAdapterHandlerImpl;
+import gateway.handler.impl.fullreq.AuthInBoundSimpleHandlerImpl;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -26,10 +28,11 @@ public class ProxyChannelInitializer extends ChannelInitializer<SocketChannel> {
         channelPipeline.addLast("HttpObjectAggregator", new HttpObjectAggregator(1024 * 1024));
 
         //扩展行为
-        channelPipeline.addLast("RouteInBoundHandlerImpl", new RouteInBoundHandlerImpl());//路由映射
-//        channelPipeline.addLast("RouteHandlerImpl4", new AuthInBoundHandlerImpl());//鉴权
+        channelPipeline.addLast("RouteInBoundAdapterHandlerImpl", new RouteInBoundAdapterHandlerImpl());//路由映射
+        channelPipeline.addLast("AuthInBoundSimpleHandlerImpl", new AuthInBoundAdapterHandlerImpl());//鉴权
+        channelPipeline.addLast("IOHandler", new IOHandler());//代理请求的转发与反馈
 
-        System.out.println("add channel handler finished...");
+//        System.out.println("add channel handler finished...");
     }
 
 }

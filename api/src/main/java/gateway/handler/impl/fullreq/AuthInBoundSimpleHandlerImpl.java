@@ -4,7 +4,7 @@ import gateway.common.*;
 import gateway.exception.AccessedDeniedException;
 import gateway.exception.NettyHandlerException;
 import gateway.handler.AuthHandler;
-import gateway.handler.ab.AbstractInBoundHandler;
+import gateway.handler.ab.AbstractInBoundSimpleHandler;
 import gateway.helper.ParamDecodeHelper;
 import gateway.helper.ResponseBackHelper;
 import io.netty.buffer.Unpooled;
@@ -12,11 +12,10 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.util.AttributeKey;
 import io.netty.util.CharsetUtil;
-import org.omg.CORBA.portable.ResponseHandler;
 
 import java.util.List;
 
-public class AuthInBoundHandlerImpl extends AbstractInBoundHandler implements AuthHandler {
+public class AuthInBoundSimpleHandlerImpl extends AbstractInBoundSimpleHandler implements AuthHandler {
     @Override
     protected boolean isLast() {
         return true;
@@ -30,7 +29,7 @@ public class AuthInBoundHandlerImpl extends AbstractInBoundHandler implements Au
 
     @Override
     protected ReturnResult businessRead(ChannelHandlerContext ctx, FullHttpRequest fullHttpRequest) {
-        System.out.println("AuthInBoundHandlerImpl handler1执行...");
+        System.out.println("AuthInBoundSimpleHandlerImpl handler1执行...");
 
         //獲取key
         String key = (String) ParamDecodeHelper.getReqParam("key", fullHttpRequest);
@@ -49,9 +48,9 @@ public class AuthInBoundHandlerImpl extends AbstractInBoundHandler implements Au
 
     @Override
     protected void businessRead2(ChannelHandlerContext ctx, FullHttpRequest msg) throws NettyHandlerException {
-        System.out.println("AuthInBoundHandlerImpl handler1执行...");
+        System.out.println("AuthInBoundSimpleHandlerImpl handler1执行...");
 
-      /*  //獲取key
+        //獲取key
         String key = (String) ParamDecodeHelper.getReqParam("key", msg);
 
         //用key判斷是否允許訪問該接口
@@ -63,8 +62,8 @@ public class AuthInBoundHandlerImpl extends AbstractInBoundHandler implements Au
             throw new AccessedDeniedException();
         }
 
-        ctx.writeAndFlush(ResponseBackHelper.httpResponse(Unpooled.copiedBuffer("404 \n resource not found", CharsetUtil.UTF_8)));
-        ctx.close();*/
+        ctx.writeAndFlush(ResponseBackHelper.httpJsonResponse(Unpooled.copiedBuffer("404 \n resource not found", CharsetUtil.UTF_8)));
+        ctx.close();
 
     }
 }

@@ -4,12 +4,14 @@ package gateway.handler.impl.fullreq;
 
 import gateway.common.*;
 import gateway.exception.NettyHandlerException;
-import gateway.exception.ResourceNotFoundException;
 import gateway.handler.RouteHandler;
-import gateway.handler.ab.AbstractInBoundHandler;
+import gateway.handler.ab.AbstractInBoundSimpleHandler;
+import gateway.helper.ResponseBackHelper;
+import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.handler.codec.http.*;
 import io.netty.util.AttributeKey;
+import io.netty.util.CharsetUtil;
 
 import java.util.Arrays;
 
@@ -19,14 +21,18 @@ import java.util.Arrays;
  * domain_A -> domain_B
  * ...
  */
-public class RouteInBoundHandlerImpl extends AbstractInBoundHandler implements RouteHandler {
+public class RouteInBoundSimpleHandlerImpl extends AbstractInBoundSimpleHandler implements RouteHandler {
     private String fromUri1;
     private String toUri1;
 
     private String fromUri2;
     private String toUri2;
+    @Override
+    protected boolean isLast() {
+        return true;
+    }
 
-    public RouteInBoundHandlerImpl() {
+    public RouteInBoundSimpleHandlerImpl() {
         fromUri1 = "/api";
         toUri1 = "http://api.test.com/api/post";
         fromUri2 = "/bd/swd";
@@ -38,7 +44,7 @@ public class RouteInBoundHandlerImpl extends AbstractInBoundHandler implements R
 
     @Override
     protected ReturnResult businessRead(ChannelHandlerContext ctx, FullHttpRequest request) {
-        System.out.println("RouteInBoundHandlerImpl handler1执行...");
+        System.out.println("RouteInBoundAdapterHandlerImpl handler1执行...");
         httpMethod = request.method();
         String uri = request.uri();
 
@@ -62,7 +68,9 @@ public class RouteInBoundHandlerImpl extends AbstractInBoundHandler implements R
 
     @Override
     protected void businessRead2(ChannelHandlerContext ctx, FullHttpRequest msg) throws NettyHandlerException {
-        System.out.println("RouteInBoundHandlerImpl handler1执行...");
+        System.out.println("RouteInBoundAdapterHandlerImpl handler1执行...");
+        ctx.writeAndFlush(ResponseBackHelper.httpJsonResponse(Unpooled.copiedBuffer("ChannelHandlerContext", CharsetUtil.UTF_8)));
+        ctx.close();
   /*      httpMethod = msg.method();
         String uri = msg.uri();
 
@@ -78,7 +86,6 @@ public class RouteInBoundHandlerImpl extends AbstractInBoundHandler implements R
 
         RouteInfo info = new RouteInfo(httpMethod, url, proxiedService);
         ctx.channel().attr(AttributeKey.newInstance(Constant.ROUTEI_INFO)).set(info);*/
-        ctx.fireChannelRead(msg);
         //            result = sendRequest(httpMethod, url, request);
     }
 

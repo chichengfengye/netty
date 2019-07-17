@@ -8,6 +8,7 @@ import okhttp3.*;
 import java.io.IOException;
 
 public class ResponseBackHelper {
+
     public static String sendRequest(HttpMethod httpMethod, String url, FullHttpRequest request) throws Exception{
         String result = "just support GET|POST method";
         OkHttpClient client = new OkHttpClient();
@@ -50,7 +51,12 @@ public class ResponseBackHelper {
         return result;
     }
 
-    public static HttpResponse httpResponse(ByteBuf content) {
+    /**
+     * 返回json格式数据
+     * @param content
+     * @return
+     */
+    public static HttpResponse httpJsonResponse(ByteBuf content) {
         HttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1, HttpResponseStatus.OK, content);
         response.headers().set(HttpHeaderNames.CONTENT_TYPE, "application/json");
         response.headers().set(HttpHeaderNames.CONTENT_LENGTH, content.readableBytes());
