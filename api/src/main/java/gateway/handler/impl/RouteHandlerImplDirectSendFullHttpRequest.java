@@ -1,23 +1,16 @@
 package gateway.handler.impl;
 
-//import gateway.config.RoutesConfig;
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import gateway.common.ProxiedService;
 import gateway.handler.RouteHandler;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.ChannelHandlerContext;
-import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.*;
-import io.netty.handler.codec.json.JsonObjectDecoder;
 import io.netty.util.CharsetUtil;
 import okhttp3.*;
 
 import java.io.IOException;
-import java.util.List;
 import java.util.Map;
 
 /**
