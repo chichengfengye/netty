@@ -1,8 +1,6 @@
 package gateway.handler.impl.adapter;
 
 import gateway.common.*;
-import gateway.exception.AccessedDeniedException;
-import gateway.exception.NettyHandlerException;
 import gateway.handler.AuthHandler;
 import gateway.handler.ab.AbstractInBoundAdapterHandler;
 import gateway.helper.ParamDecodeHelper;
@@ -20,10 +18,10 @@ public class AuthInBoundAdapterHandlerImpl extends AbstractInBoundAdapterHandler
     }
 
     @Override
-    protected void businessRead2(ChannelHandlerContext ctx, Object object) throws NettyHandlerException {
+    protected ReturnResult businessRead(ChannelHandlerContext ctx, Object object) throws Exception {
         if (object instanceof FullHttpRequest) {
             FullHttpRequest fullHttpRequest = (FullHttpRequest) object;
-            System.out.println("AuthInBoundSimpleHandlerImpl businessRead2...");
+//            System.out.println("AuthInBoundSimpleHandlerImpl businessRead...");
 
             //獲取key
             String key = (String) ParamDecodeHelper.getReqParam("key", fullHttpRequest);
@@ -34,12 +32,15 @@ public class AuthInBoundAdapterHandlerImpl extends AbstractInBoundAdapterHandler
 
             ProxiedService proxiedService = routeInfo.getProxiedService();
             if (!isAccessible(proxiedService, key)) {
-                throw new AccessedDeniedException();
+                return ReturnResult.failure(NettyCode.ACCESS_DENIED, NettyMessage.ACCESS_DENIED);
             }
 
-            System.out.println("AuthInBoundAdapterHandlerImpl finished...");
+//            System.out.println("AuthInBoundAdapterHandlerImpl finished...");
 
+            return ReturnResult.success();
         }
+
+        return ReturnResult.failure(NettyCode.COMMON_EXCEPTION, NettyMessage.COMMON_EXCEPTION);
     }
 
 }

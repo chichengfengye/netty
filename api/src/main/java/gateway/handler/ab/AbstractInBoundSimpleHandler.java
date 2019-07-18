@@ -10,7 +10,6 @@ import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.util.CharsetUtil;
 
 public abstract class AbstractInBoundSimpleHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
-    protected abstract ReturnResult businessRead(ChannelHandlerContext ctx, FullHttpRequest msg);
 
     protected abstract void businessRead2(ChannelHandlerContext ctx, FullHttpRequest msg) throws NettyHandlerException;
 

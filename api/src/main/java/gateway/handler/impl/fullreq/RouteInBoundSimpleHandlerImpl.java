@@ -43,30 +43,6 @@ public class RouteInBoundSimpleHandlerImpl extends AbstractInBoundSimpleHandler 
     private String url;
 
     @Override
-    protected ReturnResult businessRead(ChannelHandlerContext ctx, FullHttpRequest request) {
-        System.out.println("RouteInBoundAdapterHandlerImpl handler1执行...");
-        httpMethod = request.method();
-        String uri = request.uri();
-
-        if (uri.startsWith(fromUri1)) {
-            url = uri.replace(fromUri1, toUri1);
-        } else if (uri.startsWith(fromUri2)) {
-            url = uri.replace(fromUri2, toUri2);
-        } else {
-            return ReturnResult.failure(NettyCode.NOT_FOUND, NettyMessage.NOT_FOUND);
-            //            throw new ResourceNotFoundException();
-        }
-
-        ProxiedService proxiedService = getProxiedUri(fromUri1);
-
-        RouteInfo info = new RouteInfo(httpMethod, url, proxiedService);
-        ctx.channel().attr(AttributeKey.newInstance(Constant.ROUTEI_INFO)).set(info);
-
-        return ReturnResult.success();
-        //            result = sendRequest(httpMethod, url, request);
-    }
-
-    @Override
     protected void businessRead2(ChannelHandlerContext ctx, FullHttpRequest msg) throws NettyHandlerException {
         System.out.println("RouteInBoundAdapterHandlerImpl handler1执行...");
         ctx.writeAndFlush(ResponseBackHelper.httpJsonResponse(Unpooled.copiedBuffer("ChannelHandlerContext", CharsetUtil.UTF_8)));

@@ -1,7 +1,6 @@
 package gateway.handler.impl.adapter;
 
 import gateway.common.*;
-import gateway.exception.NettyHandlerException;
 import gateway.exception.ResourceNotFoundException;
 import gateway.handler.RouteHandler;
 import gateway.handler.ab.AbstractInBoundAdapterHandler;
@@ -30,8 +29,8 @@ public class RouteInBoundAdapterHandlerImpl extends AbstractInBoundAdapterHandle
     private String url;
 
     @Override
-    protected void businessRead2(ChannelHandlerContext ctx, Object msg) throws NettyHandlerException {
-        System.out.println("RouteInBoundAdapterHandlerImpl businessRead2...");
+    protected ReturnResult businessRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println("RouteInBoundAdapterHandlerImpl businessRead...");
         if (msg instanceof FullHttpRequest) {
             FullHttpRequest request = (FullHttpRequest) msg;
             httpMethod = request.method();
@@ -48,8 +47,11 @@ public class RouteInBoundAdapterHandlerImpl extends AbstractInBoundAdapterHandle
             ProxiedService proxiedService = getProxiedUri(fromUri1);
             RouteInfo info = new RouteInfo(httpMethod, url, proxiedService);
             ctx.channel().attr(AttributeKey.valueOf(Constant.ROUTEI_INFO)).set(info);
+
+            return ReturnResult.success();
         }
 
+        return ReturnResult.failure(NettyCode.COMMON_EXCEPTION, "Not a FullHttpRequest object in businessRead!");
     }
 
     @Override

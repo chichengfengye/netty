@@ -28,25 +28,6 @@ public class AuthInBoundSimpleHandlerImpl extends AbstractInBoundSimpleHandler i
     }
 
     @Override
-    protected ReturnResult businessRead(ChannelHandlerContext ctx, FullHttpRequest fullHttpRequest) {
-        System.out.println("AuthInBoundSimpleHandlerImpl handler1执行...");
-
-        //獲取key
-        String key = (String) ParamDecodeHelper.getReqParam("key", fullHttpRequest);
-
-        //用key判斷是否允許訪問該接口
-        RouteInfo routeInfo = (RouteInfo) ctx.channel()
-                .attr(AttributeKey.valueOf(Constant.ROUTEI_INFO)).get();
-
-        ProxiedService proxiedService = routeInfo.getProxiedService();
-        if (!isAccessible(proxiedService, key)) {
-            return ReturnResult.failure(NettyCode.ACCESS_DENIED, NettyMessage.ACCESS_DENIED);
-        }
-
-        return ReturnResult.success();
-    }
-
-    @Override
     protected void businessRead2(ChannelHandlerContext ctx, FullHttpRequest msg) throws NettyHandlerException {
         System.out.println("AuthInBoundSimpleHandlerImpl handler1执行...");
 
