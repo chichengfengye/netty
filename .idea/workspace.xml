@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f967fbdd-9c48-4ba9-a983-f16171372341" name="Default" comment="for test">
+    <list default="true" id="f967fbdd-9c48-4ba9-a983-f16171372341" name="Default" comment="整理注记">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -23,23 +22,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="347">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -50,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.37.Final/netty-all-4.1.37.Final-sources.jar!/io/netty/buffer/Unpooled.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="16230">
               <caret line="576" column="26" selection-start-line="576" selection-start-column="26" selection-end-line="576" selection-end-column="26" />
               <folding>
                 <element signature="e#3519#3520#0" expanded="true" />
@@ -71,8 +58,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.37.Final/netty-all-4.1.37.Final-sources.jar!/io/netty/handler/codec/http/DefaultFullHttpResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="40" column="98" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="98" />
+            <state relative-caret-position="90">
+              <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -80,8 +67,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2.jar!/okhttp3/RequestBody.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+            <state relative-caret-position="1530">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
@@ -89,12 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2.jar!/okhttp3/Headers.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3420">
+            <state relative-caret-position="180">
               <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-              <folding>
-                <element signature="e#900#901#0" expanded="true" />
-                <element signature="e#952#953#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -208,8 +191,8 @@
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/fullreq/RouteInBoundSimpleHandlerImpl.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/impl/adapter/AuthInBoundAdapterHandlerImpl.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/ab/AbstractInBoundAdapterHandler.java" />
-        <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java" />
         <option value="$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java" />
       </list>
     </option>
   </component>
@@ -299,73 +282,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="common" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
               <item name="handler" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="ab" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="netty-proj" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="gateway" type="462c0819:PsiDirectoryNode" />
-              <item name="handler" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-              <item name="fullreq" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
@@ -380,24 +297,6 @@
             <path>
               <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.squareup.okhttp3:okhttp:3.14.2" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.squareup.okhttp3:okhttp:3.14.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="okhttp-3.14.2.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="netty-proj" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: com.squareup.okhttp3:okhttp:3.14.2" type="70bed36:NamedLibraryElementNode" />
-              <item name="okhttp-3.14.2.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="okhttp3" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -585,17 +484,24 @@
       <option name="project" value="LOCAL" />
       <updated>1563178744532</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="整理注记">
+      <created>1563417659685</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1563417659685</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121015000" />
+    <option name="totallyTimeSpent" value="121542000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49125364" visible="true" weight="0.12530562" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49125364" visible="true" weight="0.17481662" />
       <window_info id="Structure" order="1" sideWeight="0.5087463" side_tool="true" visible="true" weight="0.12530562" />
       <window_info id="JRebel" order="2" side_tool="true" />
       <window_info id="Designer" order="3" />
@@ -604,12 +510,12 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.0661435" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.2309417" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.2309417" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.29147983" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.10201794" />
       <window_info anchor="bottom" id="MyBatis Sql Log" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32897604" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
@@ -689,7 +595,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="已经可以将请求转发到指定的服务下并返回数据了" />
-    <option name="LAST_COMMIT_MESSAGE" value="已经可以将请求转发到指定的服务下并返回数据了" />
+    <MESSAGE value="整理注记" />
+    <option name="LAST_COMMIT_MESSAGE" value="整理注记" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -768,7 +675,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java</url>
-          <line>108</line>
+          <line>81</line>
           <properties />
           <option name="timeStamp" value="106" />
         </line-breakpoint>
@@ -1131,32 +1038,21 @@
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2.jar!/okhttp3/Headers.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3420">
+        <state relative-caret-position="180">
           <caret line="25" column="19" selection-start-line="25" selection-start-column="19" selection-end-line="25" selection-end-column="19" />
-          <folding>
-            <element signature="e#900#901#0" expanded="true" />
-            <element signature="e#952#953#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/squareup/okhttp3/okhttp/3.14.2/okhttp-3.14.2.jar!/okhttp3/RequestBody.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.37.Final/netty-all-4.1.37.Final-sources.jar!/io/netty/handler/codec/http/DefaultFullHttpResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="40" column="98" selection-start-line="40" selection-start-column="91" selection-end-line="40" selection-end-column="98" />
+        <state relative-caret-position="1530">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.37.Final/netty-all-4.1.37.Final-sources.jar!/io/netty/buffer/Unpooled.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="16230">
           <caret line="576" column="26" selection-start-line="576" selection-start-column="26" selection-end-line="576" selection-end-column="26" />
           <folding>
             <element signature="e#3519#3520#0" expanded="true" />
@@ -1173,20 +1069,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java">
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="210">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/helper/ResponseBackHelper.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-all/4.1.37.Final/netty-all-4.1.37.Final-sources.jar!/io/netty/handler/codec/http/DefaultFullHttpResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        <state relative-caret-position="90">
+          <caret line="21" column="61" lean-forward="true" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/gateway/handler/IOHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

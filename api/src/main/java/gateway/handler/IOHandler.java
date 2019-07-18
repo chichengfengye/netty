@@ -19,6 +19,10 @@ import io.netty.util.CharsetUtil;
 public class IOHandler extends AbstractInBoundAdapterHandler {
 
     @Override
+    //TODO
+    // 1. 请求响应的异步化
+    // 2. 多method name的支持
+    // 3. 鉴权路由等等配置信息的外部存储
     protected ReturnResult businessRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         HttpResponse response = null;
         //接受數據
