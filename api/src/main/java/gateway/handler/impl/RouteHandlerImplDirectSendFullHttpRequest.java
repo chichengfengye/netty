@@ -28,23 +28,24 @@ public class RouteHandlerImplDirectSendFullHttpRequest extends SimpleChannelInbo
     private String fromUri2 = "/bd/swd";
     private String toUri2 = "http://www.baidu.com/s";
 
-    private String testUrl = "http://api.test.com:80";
+    private String testFtromUrl = "/demo";
+    private String testUrl = "";
 
     {
 //        System.out.println("RouteHandlerImplDirectSendFullHttpRequest 实例化。。。");
     }
 
-    private HttpMethod httpMethod;
-    private String url;
-
     public void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest request) throws Exception {
         boolean returnNotFound = false;
         String result = "null";
 
-        httpMethod = request.method();
+        HttpMethod httpMethod = request.method();
         String uri = request.uri();
+        String url = "";
 
-        url = testUrl + uri;
+        if (uri.startsWith(testFtromUrl)) {
+            url =  "http://192.9.104.247:8083"+uri.replace(testFtromUrl, testUrl);
+        }
 
      /*   if (uri.startsWith(fromUri1)) {
             url = uri.replace(fromUri1, toUri1);

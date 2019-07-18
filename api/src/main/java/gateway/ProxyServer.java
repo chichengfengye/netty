@@ -22,7 +22,7 @@ public class ProxyServer {
 
     public static void main(String[] args) {
         //TODO 初始化配置信息
-        int port = 8899;
+        int port = 8082;
         if (args.length > 0) {
             port = Integer.parseInt(args[0]);
         }
