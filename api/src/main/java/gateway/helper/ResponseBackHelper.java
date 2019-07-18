@@ -11,50 +11,16 @@ import java.util.List;
 import java.util.Map;
 
 public class ResponseBackHelper {
-
-    public static String sendRequest(HttpMethod httpMethod, String url, FullHttpRequest request) throws Exception {
-        String result = "just support GET|POST method";
-        OkHttpClient client = new OkHttpClient();
-        Request okRequest = null;
-        RequestBody body;
-        String reqBody = "";
-
-        if (httpMethod.equals(HttpMethod.GET)) {
-            okRequest = new Request.Builder()
-                    .url(url)
-//                        .get(null)
-                    .build();
-        } else if (httpMethod.equals(HttpMethod.POST)) {
-            HttpHeaders headers = request.headers();
-            MediaType mediaType;
-            ByteBuf byteContent = request.content();
-            if (byteContent.isReadable()) {
-                reqBody = byteContent.toString(CharsetUtil.UTF_8);
-            }
-
-            String contentType = headers.get("content-type");
-            mediaType = MediaType.get(contentType + "; charset=utf-8");
-
-            body = RequestBody.create(mediaType, reqBody);
-            okRequest = new Request.Builder()
-                    .url(url)
-                    .post(body)
-                    .build();
-
-        } else {
-            return "";
-        }
-
-        try (Response response = client.newCall(okRequest).execute()) {
-            result = response.body().string();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return result;
-    }
-
-    public static HttpResponse sendRequest2(HttpMethod httpMethod, String url, FullHttpRequest request) throws Exception {
+    /**
+     * 直接转发请求和响应，不做数据处理
+     *
+     * @param httpMethod
+     * @param url
+     * @param request
+     * @return
+     * @throws Exception
+     */
+    public static HttpResponse sendRequest(HttpMethod httpMethod, String url, FullHttpRequest request) throws Exception {
         HttpResponse response;
         Request okRequest;
 
@@ -98,6 +64,13 @@ public class ResponseBackHelper {
         return response;
     }
 
+    /**
+     * 将 okHttpResponse 转换为 nettyHttpResponse
+     *
+     * @param okResponse
+     * @return
+     * @throws IOException
+     */
     private static HttpResponse convertResponse(Response okResponse) throws IOException {
         String contentStr = okResponse.body().string();
         contentStr = contentStr == null ? "null" : contentStr;
@@ -116,7 +89,7 @@ public class ResponseBackHelper {
     }
 
     /**
-     * 返回json格式数据
+     * 返回json格式数据的NettyResponse
      *
      * @param content
      * @return

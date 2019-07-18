@@ -14,7 +14,7 @@ import io.netty.util.AttributeKey;
 import io.netty.util.CharsetUtil;
 
 /**
- * 转发请求给后面的被代理服务
+ * 转发请求给后面的被代理服务 并 写回数据给请求者
  */
 public class IOHandler extends AbstractInBoundAdapterHandler {
 
@@ -26,7 +26,7 @@ public class IOHandler extends AbstractInBoundAdapterHandler {
         if (routeInfo != null) {
             // 進行轉發
             try {
-                response = ResponseBackHelper.sendRequest2(routeInfo.getHttpMethod(), routeInfo.getUri(), (FullHttpRequest) msg);
+                response = ResponseBackHelper.sendRequest(routeInfo.getHttpMethod(), routeInfo.getUri(), (FullHttpRequest) msg);
             } catch (Exception e) {
                 e.printStackTrace();
                 ReturnResult.failure(NettyCode.COMMON_EXCEPTION, "SERVER INTERNAL EXCEPTION");
