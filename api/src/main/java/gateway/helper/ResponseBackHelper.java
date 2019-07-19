@@ -20,12 +20,8 @@ public class ResponseBackHelper {
      * @return
      * @throws Exception
      */
-    public static HttpResponse sendRequest(HttpMethod httpMethod, String url, FullHttpRequest request) throws Exception {
-        HttpResponse response;
+    public static HttpResponse doRequest(HttpMethod httpMethod, String url, FullHttpRequest request) throws Exception {
         Request okRequest;
-
-        OkHttpClient client = new OkHttpClient();
-
         if (httpMethod.equals(HttpMethod.GET)) {
             okRequest = new Request.Builder()
                     .url(url)
@@ -58,14 +54,16 @@ public class ResponseBackHelper {
             return httpJsonResponse(Unpooled.copiedBuffer("just support GET|POST method", CharsetUtil.UTF_8));
         }
 
+        OkHttpClient client = new OkHttpClient();
         Response okResponse = client.newCall(okRequest).execute();
-        response = convertResponse(okResponse);
 
-        return response;
+        return convertResponse(okResponse);
     }
+
 
     /**
      * 将 okHttpResponse 转换为 nettyHttpResponse
+     * 目前是将数据以及header做映射
      *
      * @param okResponse
      * @return

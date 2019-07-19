@@ -12,14 +12,13 @@ import io.netty.channel.socket.nio.NioServerSocketChannel;
 public class ProxyServer {
 
     private final int port;
-
-
     public ProxyServer(int port) {
         this.port = port;
     }
 
-
     public static void main(String[] args) {
+        beforeStartServer();
+
         //TODO 初始化配置信息
         int port = 8899;
         if (args.length > 0) {
@@ -29,6 +28,11 @@ public class ProxyServer {
 
         //TODO 启动服务
         proxyServer.start();
+
+    }
+
+    private static void beforeStartServer() {
+
 
     }
 

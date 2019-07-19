@@ -62,7 +62,7 @@ public class RouteInBoundSimpleHandlerImpl extends AbstractInBoundSimpleHandler 
 
         RouteInfo info = new RouteInfo(httpMethod, url, proxiedService);
         ctx.channel().attr(AttributeKey.newInstance(Constant.ROUTEI_INFO)).set(info);*/
-        //            result = sendRequest(httpMethod, url, request);
+        //            result = doRequest(httpMethod, url, request);
     }
 
     @Override

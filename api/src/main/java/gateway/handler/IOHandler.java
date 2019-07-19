@@ -30,7 +30,7 @@ public class IOHandler extends AbstractInBoundAdapterHandler {
         if (routeInfo != null) {
             // 進行轉發
             try {
-                response = ResponseBackHelper.sendRequest(routeInfo.getHttpMethod(), routeInfo.getUri(), (FullHttpRequest) msg);
+                response = ResponseBackHelper.doRequest(routeInfo.getHttpMethod(), routeInfo.getUri(), (FullHttpRequest) msg);
             } catch (Exception e) {
                 e.printStackTrace();
                 ReturnResult.failure(NettyCode.COMMON_EXCEPTION, "SERVER INTERNAL EXCEPTION");
